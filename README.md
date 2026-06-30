@@ -53,6 +53,7 @@ Mood-based food review application that allows users to save their current mood,
 - Working with user location features
 - Using Supabase for user authentication, database management, and RLS
 - Using Supabase to utilize data from multiple users across screens
+- Supabase foreign key relationship to connect multiple tables
 
 
 

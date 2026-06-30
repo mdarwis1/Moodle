@@ -1,50 +1,33 @@
-# Welcome to your Expo app 👋
+# Moodle
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
+Mood-based food review application that allows users to save their current mood, choose restauraunts from an interactive map, write reviews directly on map, and look back at past reviews.
 
-## Get started
+## Demo
+[Watch Demo]()
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+### Account
+- Gatekeeper for user login
 
-2. Start the app
+### Profile Screen 
+-
 
-   ```bash
-   npx expo start
-   ```
+### Map Screen
+-
 
-In the output, you'll find options to open the app in a
+### Review Screen
+-
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Technologies Used
+- React Native
+- Expo Go
+- TypeScript
+- Supabase
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## What I Learned
+- 
 
-## Get a fresh project
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.

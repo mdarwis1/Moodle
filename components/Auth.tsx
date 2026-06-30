@@ -1,18 +1,3 @@
-// const Auth: React.FC = () => {
-//   const router = useRouter();
-//   const [email, setEmail] = useState<string>("");
-//   const [password, setPassword] = useState<string>("");
-
-//   const openTabNav = () => {
-//     if (email != "" && password != "") {
-//       setEmail(email);
-//       router.push({
-//         pathname: "/(tabs)/profile",
-//         params: { email, password },
-//       });
-//     } else alert("Please enter your name and activity");
-//   };
-
 import defaultStyles from "@/styles/defaultStyles";
 import React, { useEffect, useState } from "react";
 import { Alert, AppState, AppStateStatus, Text } from "react-native";
@@ -34,7 +19,7 @@ export default function Auth({ noHeader }: { noHeader?: boolean } = {}) {
 
   /*
     Supabase uses background token refresh.
-    We start/stop it based on app state.
+    Start/stop based on app state.
   */
   useEffect(() => {
     const handleAppStateChange = (nextState: AppStateStatus) => {

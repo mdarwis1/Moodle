@@ -22,11 +22,6 @@ export default function AppHeader() {
   const pathname = usePathname();
   const title = getTitleFromPath(pathname);
 
-  // Simplified sign out: intentionally NOT performing any navigation here.
-  // Rationale: navigation attempts from inside nested navigators (tabs)
-  // were unreliable and caused unmatched route or no-op behavior. The
-  // app now uses a global AuthProvider and the tabs layout renders the
-  // Auth screen in-place when the session becomes null.
   async function handleLogout() {
     try {
       const { error } = await supabase.auth.signOut();

@@ -15,7 +15,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-//Base funcitonality from sem 1 project + brandLogo App
+//Base functionality from sem 1 project + brandLogo App
 //used chatGPT to fix bug issues when transferred
 //https://chatgpt.com/share/69f809de-accc-83ea-8e8f-e40dc1d1a97d
 //05/01/26

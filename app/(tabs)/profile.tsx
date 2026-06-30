@@ -11,13 +11,13 @@ import { ActivityIndicator, Alert, StyleSheet, Text, View } from "react-native";
 /*
   EditProfile screen responsibilities:
   - When mounted, fetch the profile row for the logged-in user and populate fields.
-  - Allow editing first_name, last_name, class_period.
+  - Allow editing for columns
   - Validate input, then upsert (insert or update) the profile row.
   - Provide feedback (loading, errors, success).
 */
 
 export default function Menu() {
-  const { session, isLoading: authLoading } = useAuth(); // AuthProvider provides session. :contentReference[oaicite:4]{index=4}
+  const { session, isLoading: authLoading } = useAuth(); // AuthProvider provides session
 
   // Local form state
   const [selected, setSelected] = useState<string | null>(null);
@@ -50,7 +50,7 @@ export default function Menu() {
       try {
         const userId = session.user.id;
 
-        // Read the profile row. We expect a single row matched by id.
+        // Read the profile row. Expect single row matched by id.
         const { data, error } = await supabase
           .from("profiles")
           .select("first_name, last_name, emoji")
@@ -58,10 +58,7 @@ export default function Menu() {
           .single();
 
         if (error) {
-          // No row found is okay (trigger created an empty row—may be null),
-          // but show the error if it's unexpected.
           console.warn("loadProfile error:", error);
-          // If there's no data but no error.code, data can be null; we handle that below.
         }
 
         if (mounted && data) {
@@ -108,7 +105,7 @@ export default function Menu() {
     try {
       const userId = session.user.id;
 
-      // Build payload (key names must match your DB columns)
+      // Build payload 
       const payload = {
         id: userId, // must match auth.uid() in your RLS
         first_name: firstName?.trim() || null,

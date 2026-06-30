@@ -3,6 +3,7 @@ import { Session } from "@supabase/supabase-js";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 /*
+  From teacher:
   AuthContext defines what auth-related data the rest of the app can access.
 
   session:
@@ -18,7 +19,7 @@ type AuthContextValue = {
   isLoading: boolean;
 };
 
-// Create a React Context for auth state
+// create React Context for auth state
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
 /*

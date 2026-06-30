@@ -18,7 +18,7 @@ import {
   View,
 } from "react-native";
 import MoodGrid from "./EmojiGrid";
-//learned how to fix converting to component w chat gpt chatGPT
+//learned how to fix converting to component w chatGPT
 //https://chatgpt.com/share/69d79fd0-96bc-8326-9b6d-bd531c2e79b3
 //04/09
 type Restaurant = {
@@ -36,7 +36,7 @@ type Props = {
   onClose: () => void;
   setReviewedIds: React.Dispatch<React.SetStateAction<Set<number>>>;
 };
-//Learned how to implement reviews + rating
+//Learned how to implement reviews + rating w chatGPT
 //https://chatgpt.com/share/69dcebe5-c01c-8326-984d-53c382e82d52
 
 const moodImages: Record<string, any> = {
@@ -73,7 +73,7 @@ export default function RestaurantModal({
   };
   //4/23/26
   //https://chatgpt.com/share/69ea1894-b738-83ea-823f-c78cb7d360c
-  //live arg rating update
+  // learned live avg rating update
   const fetchAverage = async () => {
     if (!restaurant) return;
 
@@ -105,7 +105,7 @@ export default function RestaurantModal({
   if (!restaurant) return null;
   //4/23/26
   //https://chatgpt.com/share/69ea1894-b738-83ea-823f-c78cb7d360c
-  //live adress update
+  // learned live address update
   const fetchAddress = async () => {
     if (!restaurant) return;
 

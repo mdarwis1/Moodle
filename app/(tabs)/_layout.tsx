@@ -9,13 +9,16 @@ import { View } from "react-native";
 
 export default function TabsLayout() {
   const { session } = useAuth();
-  if (session === null) {
-    return (
-      <View style={{ flex: 1 }}>
-        <AppHeader />
-        <Auth />
-      </View>
-    );
+  // if (session === null) {
+  //   return (
+  //     <View style={{ flex: 1 }}>
+  //       <AppHeader />
+  //       <Auth />
+  //     </View>
+  //   );
+  // }\
+  if (!session) {
+    return <Auth />;
   }
 
   return (

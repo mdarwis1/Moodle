@@ -1,7 +1,7 @@
 # Moodle
 
 ## Overview
-Mood-based food review application that allows users to save their current mood, choose restauraunts from an interactive map, write reviews directly on map, and look back at past reviews.
+Mood-based food review application where users select their current mood to discover nearby restaurants tailored to that mood, write reviews directly from an interactive map, and revisit previous reviews.
 
 ## Demo
 [Watch Demo](https://drive.google.com/file/d/19ZSuLSe2diOJeVcEWRaRqp5F8fJc6z4a/view?usp=sharing)
@@ -22,22 +22,22 @@ Mood-based food review application that allows users to save their current mood,
 ### Profile Screen 
 - Text fields for first and last name
 - Emoji grid where user can select current mood from 9 options
-- User data saved into Supabase table
+- User profile and mood data saved into Supabase table
 
 ### Map Screen
 - Interactive map with real locations using Overpass API
-- Passes user's actual location (Default location used for demo)
-- User's current mood determines which locations map displays
-- Map filtering system connecting user mood to locations from Overpass (via cuisine/type)
-- Review writing modal displays location name, address (hyperlinked), and average rating (default 3.5)
-- Average rating can change based on actual user reviews
-- "Reviews" dropdown displays reviews from other users 
+- Utilizes the user's current location (demo uses a fixed default location)
+- Displays restaurants based on the user's selected mood
+- Filters restaurants returned by Overpass using cuisine/venue mapped to each mood
+- Review writing modal displays restaurant name, clickable address, and average rating (default 3.5 when no reviews exist)
+- Average ratings update based on actual user reviews
+- Expandable reviews dropdown displays reviews submitted by other users 
 - Star rating, user mood, and text box provided for review writing
-- Pin switching from red to green indicates review submitted
+- Map pin changes from red to green after user submits a review
 
 ### Review Screen
-- Displays leaderboard ranking number of reviews per user
-- Shows reviews written by user
+- Leaderboard ranks users based on total reviews submitted
+- Shows reviews written by the user
 - Clicking review displays all review details
 - User can delete review
 
@@ -45,11 +45,12 @@ Mood-based food review application that allows users to save their current mood,
 - React Native
 - Expo Go
 - TypeScript
+- React Native Maps
 - Supabase
 - Overpass API
 
 ## What I Learned
-- Implementing Overpass API queries to create an interactive map
+- Implementing Overpass API to retrieve and display restaurants on an interactive map
 - Working with user location features
 - Using Supabase for user authentication, database management, and RLS
 - Using Supabase to utilize data from multiple users across screens
